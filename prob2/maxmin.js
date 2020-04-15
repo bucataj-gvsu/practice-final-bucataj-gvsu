@@ -33,7 +33,7 @@ function addDeleters() {
     function deleter() {
       alert("TODO");
     }
-    xButton.onclick = addDeleters;
+    xButton.onclick = deleter;
 
     appendAfter(xButton, inputField);
 
