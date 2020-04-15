@@ -32,7 +32,8 @@ function addDeleters() {
 
     // Using closure to capture which elements to delete
     function deleter() {
-      alert("TODO");
+      inputField.remove();
+      xButton.remove();
     }
     xButton.onclick = deleter;
 
