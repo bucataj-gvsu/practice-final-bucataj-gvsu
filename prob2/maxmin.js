@@ -11,6 +11,7 @@ function doMath() {
 
   let firstValue = parseFloat(inputFields[0].value.trim());
   let sum = firstValue;
+  let cnt = 1;
   let minval = firstValue;
   let minloc = 0;
   let maxval = firstValue;
@@ -23,6 +24,7 @@ function doMath() {
     }
 
     sum += thisValue;
+    cnt++;
 
     if (thisValue < minval) {
       minval = thisValue;
@@ -37,7 +39,7 @@ function doMath() {
 
   document.getElementById("min").innerText = minval;
   document.getElementById("max").innerText = maxval;
-  document.getElementById("average").innerText = sum / inputFields.length;
+  document.getElementById("average").innerText = sum / cnt;
 }
 
 document.getElementById("submit").onclick = doMath;
