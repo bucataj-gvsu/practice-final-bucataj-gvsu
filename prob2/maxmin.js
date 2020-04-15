@@ -22,7 +22,7 @@ document.getElementById("more").onclick = addMore;
 
 function addDeleters() {
   let inputFields = document.getElementById("input-list").children;
-  for (let i = 0; i < inputFields.length; i++) {
+  for (let i = inputFields.length - 1; i >= 0; i--) {
     var inputField = inputFields[i];
 
     var xButton = document.createElement("button");
