@@ -35,7 +35,8 @@ function addDeleters() {
     }
     xButton.onclick = addDeleters;
 
-    appendAfter(inputField, xButton);
+    appendAfter(xButton, inputField);
+
   }
 }
 
