@@ -18,6 +18,10 @@ function doMath() {
 
   for (let i = 1; i < inputFields.length; i++) {
     thisValue = parseFloat(inputFields[i].value.trim());
+    if (isNaN(thisValue)) {
+      continue;
+    }
+
     sum += thisValue;
 
     if (thisValue < minval) {
