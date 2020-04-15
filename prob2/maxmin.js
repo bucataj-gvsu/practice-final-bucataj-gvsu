@@ -9,7 +9,7 @@ function appendAfter(element, target) {
 function doMath() {
   let inputFields = document.getElementById("input-list").children;
 
-  let firstValue = inputFields[0].value;
+  let firstValue = parseFloat(inputFields[0].value.trim());
   let sum = firstValue;
   let minval = firstValue;
   let minloc = 0;
@@ -17,7 +17,7 @@ function doMath() {
   let maxloc = 0;
 
   for (let i = 1; i < inputFields.length; i++) {
-    thisValue = inputFields[i].value;
+    thisValue = parseFloat(inputFields[i].value.trim());
     sum += thisValue;
 
     if (thisValue < minval) {
