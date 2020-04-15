@@ -21,7 +21,22 @@ document.getElementById("more").onclick = addMore;
 /****************************/
 
 function addDeleters() {
-  alert('TODO');
+  let inputFields = document.getElementById("input-list").children;
+  for (let i = 0; i < inputFields.length; i++) {
+    var inputField = inputFields[i];
+
+    var xButton = document.createElement("button");
+    xButton.innerText = "Delete";
+    xButton.color = "red";
+
+    // Using closure to capture which elements to delete
+    function deleter() {
+      alert("TODO");
+    }
+    xButton.onclick = addDeleters;
+
+    appendAfter(inputField, xButton);
+  }
 }
 
 function addDeleteButton() {
