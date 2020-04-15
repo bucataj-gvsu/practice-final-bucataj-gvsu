@@ -9,15 +9,14 @@ function appendAfter(element, target) {
 function doMath() {
   let inputFields = document.getElementById("input-list").children;
 
-  let firstValue = parseFloat(inputFields[0].value.trim());
-  let sum = firstValue;
-  let cnt = 1;
-  let minval = firstValue;
+  let sum = 0;
+  let cnt = 0;
+  let minval = 0;
   let minloc = 0;
-  let maxval = firstValue;
+  let maxval = 0;
   let maxloc = 0;
 
-  for (let i = 1; i < inputFields.length; i++) {
+  for (let i = 0; i < inputFields.length; i++) {
     thisValue = parseFloat(inputFields[i].value.trim());
     if (isNaN(thisValue)) {
       continue;
@@ -26,12 +25,12 @@ function doMath() {
     sum += thisValue;
     cnt++;
 
-    if (thisValue < minval) {
+    if (cnt == 1 || thisValue < minval) {
       minval = thisValue;
       minloc = i;
     }
 
-    if (thisValue > maxval) {
+    if (cnt == 1 || thisValue > maxval) {
       maxval = thisValue;
       maxloc = i;
     }
