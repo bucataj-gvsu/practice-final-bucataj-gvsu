@@ -26,9 +26,7 @@ function addDeleteButton() {
   removeButton.innerText = "Delete";
   removeButton.onclick = addDeleters;
 
-  // from StackOverflow https://tinyurl.com/slvljt9
-  target = document.getElementById("more");
-  appendAfter(removeButton, target);
+  appendAfter(removeButton, document.getElementById("more"));
 }
 
 addDeleteButton();
