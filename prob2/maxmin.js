@@ -4,6 +4,8 @@ function appendAfter(element, target) {
   target.parentNode.insertBefore(element, target.nextSibling);
 }
 
+/****************************/
+
 function addMore() {
   let inputList = document.getElementById("input-list");
 
@@ -15,6 +17,8 @@ function addMore() {
 }
 
 document.getElementById("more").onclick = addMore;
+
+/****************************/
 
 function addDeleters() {
   alert('TODO');
