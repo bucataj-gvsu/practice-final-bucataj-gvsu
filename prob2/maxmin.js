@@ -26,8 +26,9 @@ function addDeleters() {
     var inputField = inputFields[i];
 
     var xButton = document.createElement("button");
-    xButton.innerText = "Delete";
-    xButton.color = "red";
+    xButton.innerText = "[X]";
+    xButton.style.backgroundColor = "red";
+    xButton.style.color = "white";
 
     // Using closure to capture which elements to delete
     function deleter() {
