@@ -10,10 +10,15 @@ function addMore() {
 
 document.getElementById("more").onclick = addMore;
 
+function addDeleters() {
+  alert('TODO');
+}
+
 function addDeleteButton() {
   removeButton = document.createElement("button");
   removeButton.setAttribute("id", "delete");
   removeButton.innerText = "Delete";
+  removeButton.onclick = addDeleters;
 
   // from StackOverflow https://tinyurl.com/slvljt9
   target = document.getElementById("more");
