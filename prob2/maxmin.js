@@ -1,3 +1,9 @@
+function appendAfter(element, target) {
+  // from StackOverflow https://tinyurl.com/slvljt9
+  // N.B. Doesn't work for a last element
+  target.parentNode.insertBefore(element, target.nextSibling);
+}
+
 function addMore() {
   let inputList = document.getElementById("input-list");
 
@@ -22,7 +28,7 @@ function addDeleteButton() {
 
   // from StackOverflow https://tinyurl.com/slvljt9
   target = document.getElementById("more");
-  target.parentNode.insertBefore(removeButton, target.nextSibling);
+  appendAfter(removeButton, target);
 }
 
 addDeleteButton();
