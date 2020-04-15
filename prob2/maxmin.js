@@ -6,6 +6,40 @@ function appendAfter(element, target) {
 
 /****************************/
 
+function doMath() {
+  let inputFields = document.getElementById("input-list").children;
+
+  let firstValue = inputFields[0].value;
+  let sum = firstValue;
+  let minval = firstValue;
+  let minloc = 0;
+  let maxval = firstValue;
+  let maxloc = 0;
+
+  for (let i = 1; i < inputFields.length; i++) {
+    thisValue = inputFields[i].value;
+    sum += thisValue;
+
+    if (thisValue < minval) {
+      minval = thisValue;
+      minloc = i;
+    }
+
+    if (thisValue > maxval) {
+      maxval = thisValue;
+      maxloc = i;
+    }
+  }
+
+  document.getElementById("min").innerText = minval;
+  document.getElementById("max").innerText = maxval;
+  document.getElementById("average").innerText = sum / inputFields.length;
+}
+
+document.getElementById("submit").onclick = doMath;
+
+/****************************/
+
 function addMore() {
   let inputList = document.getElementById("input-list");
 
