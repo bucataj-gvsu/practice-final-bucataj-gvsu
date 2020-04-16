@@ -54,7 +54,7 @@ function makeHideables() {
 
   for (let i = 0; i < twistables.length; i++) {
     let target = twistables[i];
-    target.innerText = '\u25B6' + target.innerText;
+    target.innerText = '\u25BC' + target.innerText;
   }
 
 }
